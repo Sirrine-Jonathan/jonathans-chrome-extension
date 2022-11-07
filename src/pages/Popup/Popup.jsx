@@ -27,22 +27,22 @@ const Popup = () => {
 
   const textHasTerm = (text) => {
     return text.toLowerCase().includes(term.trim().toLowerCase());
-  }
+  };
 
   const nodeHasTerm = (node) => {
-    if (term.trim() === "") return true;
-    if (node.children){
-      return node.children.some(childNode => nodeHasTerm(childNode));
+    if (term.trim() === '') return true;
+    if (node.children) {
+      return node.children.some((childNode) => nodeHasTerm(childNode));
     } else {
       return textHasTerm(node.title);
     }
-  }
+  };
 
   const hightlightTerm = (text) => {
     const regex = RegExp(term, 'gi');
     const textCopy = text;
     const arr = [];
-    
+
     let matchArr;
     while ((matchArr = regex.exec(textCopy)) !== null) {
       const preText = textCopy.slice(0, regex.lastIndex - term.length);
@@ -54,15 +54,13 @@ const Popup = () => {
     }
     arr.push(text);
     return arr;
-  }
+  };
 
   const makeBookmark = (node) => {
     return (
       <div className="bookmark">
         <a href={node.url} target="_blank" rel="noopener noreferrer">
-          {term
-            ? hightlightTerm(node.title)
-            : node.title}
+          {term ? hightlightTerm(node.title) : node.title}
         </a>
       </div>
     );

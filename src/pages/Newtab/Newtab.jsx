@@ -44,8 +44,14 @@ const Newtab = () => {
       <div>
         <section className="quick-links">
           <ul>
-            <li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
-            <li><a href="https://stackoverflow.com/questions/tagged/javascript?sort=Newest&filters=NoAnswers,NoAcceptedAnswer&uqlId=65550">Stack Overflow</a></li>
+            <li>
+              <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+            </li>
+            <li>
+              <a href="https://stackoverflow.com/questions/tagged/javascript?sort=Newest&filters=NoAnswers,NoAcceptedAnswer&uqlId=65550">
+                Stack Overflow
+              </a>
+            </li>
           </ul>
         </section>
       </div>

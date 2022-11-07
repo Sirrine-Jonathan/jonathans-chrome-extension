@@ -44,16 +44,35 @@ const options = {
     content: path.join(__dirname, 'src', 'pages', 'Content', 'index.js'),
     prettify: {
       import: [
-        path.join(__dirname, 'src', 'assets', 'google-code-prettify', 'prettify.js'),
-        path.join(__dirname, 'src', 'assets', 'google-code-prettify', 'run_prettify.js')
+        path.join(
+          __dirname,
+          'src',
+          'assets',
+          'google-code-prettify',
+          'prettify.js'
+        ),
+        path.join(
+          __dirname,
+          'src',
+          'assets',
+          'google-code-prettify',
+          'run_prettify.js'
+        ),
       ],
-      filename: 'prettify.bundle.js'
+      filename: 'prettify.bundle.js',
     },
     devtools: path.join(__dirname, 'src', 'pages', 'Devtools', 'index.js'),
-    panel: path.join(__dirname, 'src', 'pages', 'Panel', 'index.jsx')
+    panel: path.join(__dirname, 'src', 'pages', 'Panel', 'index.jsx'),
   },
   chromeExtensionBoilerplate: {
-    notHotReload: ['background', 'content', 'devtools', 'webpack', 'prettify', 'pretty_langs']
+    notHotReload: [
+      'background',
+      'content',
+      'devtools',
+      'webpack',
+      'prettify',
+      'pretty_langs',
+    ],
   },
   output: {
     filename: '[name].bundle.js',

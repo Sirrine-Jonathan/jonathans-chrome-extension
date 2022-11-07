@@ -5,11 +5,7 @@
   "version": "0.0.1",
   "author": "Jonathan Sirrine",
   "options_page": "options.html",
-  "permissions": [
-    "bookmarks",
-    "clipboardWrite",
-    "ttsEngine"
-  ],
+  "permissions": ["bookmarks", "clipboardWrite", "ttsEngine"],
   "background": {
     "service_worker": "background.bundle.js",
     "type": "module"
@@ -26,16 +22,10 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["<all_urls>"],
       "run_at": "document_end",
-      "js": [
-        "content.bundle.js"
-      ],
-      "css": [
-        "content.styles.css"
-      ]
+      "js": ["content.bundle.js"],
+      "css": ["content.styles.css"]
     }
   ],
   "devtools_page": "devtools.html",
@@ -49,9 +39,7 @@
         "icon-128.png",
         "icon-34.png"
       ],
-      "matches": [
-        "https://www.ancestrystage.com/*"
-      ]
+      "matches": ["https://www.ancestrystage.com/*"]
     }
-  ]  
+  ]
 }
