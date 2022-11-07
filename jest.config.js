@@ -1,6 +1,6 @@
 module.exports = {
-    transform: {
-      "^.+\\.(js|jsx)$": "babel-jest",
-    },
-    coverageReporters: ['lcov'],
-  };
+  transform: {
+    '^.+\\.(js|jsx)$': 'babel-jest',
+  },
+  coverageReporters: ['lcov'],
+};

@@ -1,4 +1,4 @@
-import { getStyleString } from '../../helpers/common'
+import { getStyleString } from '../../helpers/common';
 
 const baseStylesObj = {
   color: '#fff',
