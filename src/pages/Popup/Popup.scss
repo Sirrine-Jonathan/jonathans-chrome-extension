@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+body {
+  overflow-y: hidden;
+  background: $primaryDark;
+}
+
+#bookmark-root {
+  padding: 10px $horizontalBuffer;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+}
+
+input {
+  width: 100%;
+  background: $secondaryDark;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 6px $horizontalBuffer;
+  color: $primaryLight;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  color: $primaryLight;
+
+  .category {
+    padding: 2px $horizontalBuffer;;
+  }
+
+  h3 {
+    margin: 5px 0 0;
+    padding: 2px $horizontalBuffer;
+  }
+
+  .leaf {
+    margin: 0 0 10px 0;
+  }
+}
+
+.bookmark {
+  padding: 0;
+
+  a {
+    color: $primaryLight;
+    text-decoration: none;
+    display: block;
+    padding: 2px $horizontalBuffer;
+
+    &:hover {
+      background-color: lighten($secondaryDark, 20%);
+    }
+  }
+}
+
+span.highlight {
+  background: #ffff50;
+  color: #000;
+}

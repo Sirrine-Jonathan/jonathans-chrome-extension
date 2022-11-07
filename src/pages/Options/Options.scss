@@ -1,0 +1,85 @@
+@use "sass:color";
+$primaryDark: rgb(27, 27, 24);
+$primaryLight: rgb(246, 243, 240);
+$phi: 1.6180339887498948482;
+$topPadding: 15px;
+$sidePadding: $phi * $topPadding;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $primaryLight;
+    color: black;
+}
+
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.App-header {
+    padding: $topPadding $sidePadding;
+    background-color: $primaryDark;
+    color: white;
+
+    .App-header-top {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-top: 3px;
+        }
+
+        .titles {
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+
+            h1,
+            h2 {
+                margin: 0;
+                font-size: calc(1.5vmin);
+                cursor: pointer;
+            }
+
+            .separator {
+                margin: 0 10px;
+                color: white;
+            }
+        }
+    }
+}
+
+.App-main {
+    flex: 1;
+    padding: $topPadding $sidePadding;
+}
+
+.quick-links {
+    ul li {
+        list-style: none;
+        display: flex;
+
+        a {
+            text-decoration: none;
+            background: #fff;
+            color: #262626;
+            font-size: calc(1.5vmin);
+            margin: 8px 0;
+            padding: 6px 10px;
+            border: 2px solid white;
+            border-radius: 6px;
+        }
+    }
+}
+
+.quick-links a:hover {
+    color: $primaryDark;
+    background-color: white;
+}

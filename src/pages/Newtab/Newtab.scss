@@ -1,0 +1,95 @@
+@import '../variables.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $secondaryDark;
+  color: black;
+}
+
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  padding: $topPadding $sidePadding;
+  background: $primaryDark;
+  color: $primaryLight;
+
+  .App-header-top {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-top: 3px;
+    }
+
+    .titles {
+      margin: 0 20px;
+      display: flex;
+      align-items: center;
+
+      .main-nav-item {
+        margin: 0;
+        font-size: calc(1.5vmin);
+        cursor: pointer;
+        padding: 3px 0;
+        transition: all 0.2s;
+        &:hover {
+          box-shadow: 0px 2px 0px 0px $accentColor;
+        }
+      }
+
+      .separator {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.App-main {
+  flex: 1;
+  padding: $topPadding $sidePadding;
+}
+
+.quick-links {
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      display: flex;
+      list-style: none;
+      a, button {
+        text-decoration: none;
+        background: #fff;
+        color: #262626;
+        font-size: calc(1.5vmin);
+        margin: 8px 0;
+        padding: 6px 10px;
+        border: 2px solid #fff;
+        border-radius: 6px;
+        transition: all 0.2s;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      a:hover, button:hover {
+        box-shadow: (-$buttonSlide) $buttonPinch 0px 0px $accentColor,
+        (-$buttonSlide) (-$buttonPinch) 0px 0px $accentColor;
+        transform: translate($buttonSlide, 0px);
+      }
+    }
+  }
+}
+
+.quick-links a:hover {
+  color: $primaryDark;
+  background-color: #fff;
+}
