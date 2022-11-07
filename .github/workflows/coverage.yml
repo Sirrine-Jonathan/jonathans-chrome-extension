@@ -1,5 +1,6 @@
 name: Send Coverage Report to DeepSource
 on: pull_request
+  types: [opened, reopened, edited]
 jobs:
   build:
     runs-on: ubuntu-latest
