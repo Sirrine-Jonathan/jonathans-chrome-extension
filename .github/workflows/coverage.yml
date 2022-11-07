@@ -12,5 +12,5 @@ jobs:
       - run: npm run build --if-present
       - run: npm run coverage
       - run: sh 'curl https://deepsource.io/cli | sh'
-			- run: sh 'DEEPSOURCE_DSN=${{ secrets.DATA_SOURCE_NAME }} ./bin/deepsource report --analyzer test-coverage --key javascript --value-file coverage/lcov.info'
+      - run: sh 'DEEPSOURCE_DSN=${{ secrets.DATA_SOURCE_NAME }} ./bin/deepsource report --analyzer test-coverage --key javascript --value-file coverage/lcov.info'
 					
