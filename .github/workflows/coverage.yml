@@ -1,6 +1,7 @@
 name: Send Coverage Report to DeepSource
-on: pull_request
-  types: [opened, reopened, edited]
+on:
+  pull_request:
+    types: [opened, edited, reopened]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,8 +11,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '14.x'
-      - run: npm run build --if-present
+      - run: npm run build
       - run: npm run coverage
       - run: sh 'curl https://deepsource.io/cli | sh'
       - run: sh 'DEEPSOURCE_DSN=${{ secrets.DATA_SOURCE_NAME }} ./bin/deepsource report --analyzer test-coverage --key javascript --value-file coverage/lcov.info'
-					
