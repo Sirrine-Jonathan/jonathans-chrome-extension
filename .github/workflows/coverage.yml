@@ -11,6 +11,18 @@ jobs:
           node-version: '14.x'
       - run: npm install
       - run: npm run build
+  coverage:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - run: npm run coverage
-      - run: sh 'curl https://deepsource.io/cli | sh'
-      - run: sh 'DEEPSOURCE_DSN=${{ secrets.DATA_SOURCE_NAME }} ./bin/deepsource report --analyzer test-coverage --key javascript --value-file coverage/lcov.info'
+  report:
+    runs-on: ubuntu-latest
+    needs: [build, coverage]
+    steps:
+      - uses: deepsourcelabs/test-coverage-action@master
+        name: Report test coverage to DeepSource
+        with:
+          key: javascript
+          coverage-file: coverage/lcov.info
+          dsn: ${{ secrets.DEEPSOURCE_DSN }}
