@@ -11,15 +11,7 @@ jobs:
           node-version: '14.x'
       - run: npm install
       - run: npm run build
-  coverage:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - run: npm run coverage
-  report:
-    runs-on: ubuntu-latest
-    needs: [build, coverage]
-    steps:
       - uses: deepsourcelabs/test-coverage-action@master
         name: Report test coverage to DeepSource
         with:
