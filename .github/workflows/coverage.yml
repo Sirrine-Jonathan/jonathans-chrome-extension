@@ -1,8 +1,5 @@
 name: Send Coverage Report to DeepSource
-on:
-  pull_request:
-    types: [opened, edited, reopened, synchronize]
-    branches-ignore: [master]
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
