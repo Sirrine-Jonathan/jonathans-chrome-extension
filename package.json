@@ -6,10 +6,13 @@
   "scripts": {
     "build": "node utils/build.js",
     "start": "node utils/webserver.js",
+    "test": "jest tests",
+    "coverage": "nyc npm test -- --coverage",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.2",
+    "babel-jest": "^29.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0"
@@ -39,7 +42,9 @@
     "fs-extra": "^10.0.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.3.0",
     "node-sass": "^6.0.1",
+    "nyc": "^15.1.0",
     "prettier": "^2.5.1",
     "sass-loader": "^12.4.0",
     "source-map-loader": "^3.0.1",
