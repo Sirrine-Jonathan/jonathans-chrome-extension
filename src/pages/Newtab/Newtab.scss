@@ -11,7 +11,6 @@ body {
   color: black;
 }
 
-
 .App {
   min-height: 100vh;
   display: flex;
@@ -66,7 +65,8 @@ body {
     li {
       display: flex;
       list-style: none;
-      a, button {
+      a,
+      button {
         text-decoration: none;
         background: #fff;
         color: #262626;
@@ -80,9 +80,10 @@ body {
         cursor: pointer;
       }
 
-      a:hover, button:hover {
+      a:hover,
+      button:hover {
         box-shadow: (-$buttonSlide) $buttonPinch 0px 0px $accentColor,
-        (-$buttonSlide) (-$buttonPinch) 0px 0px $accentColor;
+          (-$buttonSlide) (-$buttonPinch) 0px 0px $accentColor;
         transform: translate($buttonSlide, 0px);
       }
     }
